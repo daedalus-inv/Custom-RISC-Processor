@@ -1,0 +1,4 @@
+module RISC_16_Manual_test(
+	input [1:0] KEY
+);
+endmodule 

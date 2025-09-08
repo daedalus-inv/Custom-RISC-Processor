@@ -1,0 +1,11 @@
+module Reg(
+	input 				enable,
+	input 				clk,
+	input 	[15:0] 	D,
+	output 	[15:0] 	Q
+);
+
+always (clk) begin
+end
+
+endmodule 

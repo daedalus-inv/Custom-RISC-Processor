@@ -1,0 +1,14 @@
+module tick_FSM(
+	// Each clock pulse will increment the tick finite state machine to move through its 5 states
+	input				clk,
+	output	[4:0]	tick,
+);
+
+// Machine is ones hot encodes
+// STATES: 10000 -> 01000 -> 00100 -> 00010 -> 00001
+//           ^___________________________________|
+
+
+always (clk) begin:
+
+end;

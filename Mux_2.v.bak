@@ -1,0 +1,10 @@
+module Mux(
+	input 	 		select,
+	input [15:0] 	a,
+	input [15:0] 	b,
+	output [15:0] 	out
+);
+
+assign out = select[0]? b : a;
+
+endmodule 

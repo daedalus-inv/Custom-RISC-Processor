@@ -1,0 +1,10 @@
+module bcd_1(
+	input 	[3:0] in,
+	output	[6:0] out
+);
+
+reg [6:0] temp;
+assign out = temp;
+
+always @(in) begin
+end
