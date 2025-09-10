@@ -1,4 +1,10 @@
 module RISC_16(
+// ----==== TESTING I/O ====----
+	output	[15:0]		t_alu_in1, 
+	output	[15:0]		t_alu_in2,
+	output	[15:0]		t_alu_out,
+	
+// ----==== REGULAR I/O ====----
 	input 				clk,
 	input 				enable,
 	input 	[15:0] 	instruction,
@@ -6,6 +12,10 @@ module RISC_16(
 	output 	[15:0] 	display
 );
 
+// ----==== TESTING WIRES ====----
+assign 	t_alu_in1 = alu_in1; 
+assign	t_alu_in2 = alu_in2;
+assign 	t_alu_out = alu_out;
 
 // ----==== CONTROL SIGNALS ====----
 wire 	[15:0] 	alu_out;
@@ -105,7 +115,7 @@ Reg disp_register(
 	.enable(disp_enable),
 	.clk(clk),
 	.D(~alu_out),
-	.Q(display)
+	.Q(display)			// TO BE UPDATED
 );
 
 endmodule 

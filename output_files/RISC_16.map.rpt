@@ -1,5 +1,5 @@
-Analysis & Synthesis report for RISC_16
-Sun Sep 07 20:52:22 2025
+Analysis & Elaboration report for RISC_16
+Wed Sep 10 22:41:41 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -7,24 +7,14 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
- 11. Inverted Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Port Connectivity Checks: "RISC_16:Proc|Mux_2:Sign_ext_mux"
- 14. Port Connectivity Checks: "RISC_16:Proc|PC_counter:PC"
- 15. Port Connectivity Checks: "RISC_16:Proc"
- 16. Post-Synthesis Netlist Statistics for Top Partition
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
- 19. Analysis & Synthesis Suppressed Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Port Connectivity Checks: "RISC_16:Proc|Mux_2:Sign_ext_mux"
+  6. Port Connectivity Checks: "RISC_16:Proc|PC_counter:PC"
+  7. Port Connectivity Checks: "RISC_16:Proc"
+  8. Analysis & Elaboration Messages
+  9. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -48,111 +38,25 @@ refer to the applicable agreement for further details.
 
 
 +----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
+; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Sep 07 20:52:22 2025       ;
+; Analysis & Elaboration Status      ; Successful - Wed Sep 10 22:41:41 2025       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; RISC_16                                     ;
-; Top-level Entity Name              ; RISC_16_Manual_test                         ;
+; Top-level Entity Name              ; RISC_16_TB                                  ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 21                                          ;
-;     Total combinational functions  ; 21                                          ;
-;     Dedicated logic registers      ; 8                                           ;
-; Total registers                    ; 8                                           ;
-; Total pins                         ; 29                                          ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
-; UFM blocks                         ; 0                                           ;
-; ADC blocks                         ; 0                                           ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
+; UFM blocks                         ; N/A until Partition Merge                   ;
+; ADC blocks                         ; N/A until Partition Merge                   ;
 +------------------------------------+---------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                               ;
-+------------------------------------------------------------------+---------------------+--------------------+
-; Option                                                           ; Setting             ; Default Value      ;
-+------------------------------------------------------------------+---------------------+--------------------+
-; Device                                                           ; 10M50DAF484C7G      ;                    ;
-; Top-level entity name                                            ; RISC_16_Manual_test ; RISC_16            ;
-; Family name                                                      ; MAX 10              ; Cyclone V          ;
-; Use smart compilation                                            ; Off                 ; Off                ;
-; Enable parallel Assembler and Timing Analyzer during compilation ; On                  ; On                 ;
-; Enable compact report table                                      ; Off                 ; Off                ;
-; Restructure Multiplexers                                         ; Auto                ; Auto               ;
-; Create Debugging Nodes for IP Cores                              ; Off                 ; Off                ;
-; Preserve fewer node names                                        ; On                  ; On                 ;
-; Intel FPGA IP Evaluation Mode                                    ; Enable              ; Enable             ;
-; Verilog Version                                                  ; Verilog_2001        ; Verilog_2001       ;
-; VHDL Version                                                     ; VHDL_1993           ; VHDL_1993          ;
-; State Machine Processing                                         ; Auto                ; Auto               ;
-; Safe State Machine                                               ; Off                 ; Off                ;
-; Extract Verilog State Machines                                   ; On                  ; On                 ;
-; Extract VHDL State Machines                                      ; On                  ; On                 ;
-; Ignore Verilog initial constructs                                ; Off                 ; Off                ;
-; Iteration limit for constant Verilog loops                       ; 5000                ; 5000               ;
-; Iteration limit for non-constant Verilog loops                   ; 250                 ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                          ; On                  ; On                 ;
-; Infer RAMs from Raw Logic                                        ; On                  ; On                 ;
-; Parallel Synthesis                                               ; On                  ; On                 ;
-; DSP Block Balancing                                              ; Auto                ; Auto               ;
-; NOT Gate Push-Back                                               ; On                  ; On                 ;
-; Power-Up Don't Care                                              ; On                  ; On                 ;
-; Remove Redundant Logic Cells                                     ; Off                 ; Off                ;
-; Remove Duplicate Registers                                       ; On                  ; On                 ;
-; Ignore CARRY Buffers                                             ; Off                 ; Off                ;
-; Ignore CASCADE Buffers                                           ; Off                 ; Off                ;
-; Ignore GLOBAL Buffers                                            ; Off                 ; Off                ;
-; Ignore ROW GLOBAL Buffers                                        ; Off                 ; Off                ;
-; Ignore LCELL Buffers                                             ; Off                 ; Off                ;
-; Ignore SOFT Buffers                                              ; On                  ; On                 ;
-; Limit AHDL Integers to 32 Bits                                   ; Off                 ; Off                ;
-; Optimization Technique                                           ; Balanced            ; Balanced           ;
-; Carry Chain Length                                               ; 70                  ; 70                 ;
-; Auto Carry Chains                                                ; On                  ; On                 ;
-; Auto Open-Drain Pins                                             ; On                  ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                            ; Off                 ; Off                ;
-; Auto ROM Replacement                                             ; On                  ; On                 ;
-; Auto RAM Replacement                                             ; On                  ; On                 ;
-; Auto DSP Block Replacement                                       ; On                  ; On                 ;
-; Auto Shift Register Replacement                                  ; Auto                ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                  ; Auto                ; Auto               ;
-; Auto Clock Enable Replacement                                    ; On                  ; On                 ;
-; Strict RAM Replacement                                           ; Off                 ; Off                ;
-; Allow Synchronous Control Signals                                ; On                  ; On                 ;
-; Force Use of Synchronous Clear Signals                           ; Off                 ; Off                ;
-; Auto RAM Block Balancing                                         ; On                  ; On                 ;
-; Auto RAM to Logic Cell Conversion                                ; Off                 ; Off                ;
-; Auto Resource Sharing                                            ; Off                 ; Off                ;
-; Allow Any RAM Size For Recognition                               ; Off                 ; Off                ;
-; Allow Any ROM Size For Recognition                               ; Off                 ; Off                ;
-; Allow Any Shift Register Size For Recognition                    ; Off                 ; Off                ;
-; Use LogicLock Constraints during Resource Balancing              ; On                  ; On                 ;
-; Ignore translate_off and synthesis_off directives                ; Off                 ; Off                ;
-; Timing-Driven Synthesis                                          ; On                  ; On                 ;
-; Report Parameter Settings                                        ; On                  ; On                 ;
-; Report Source Assignments                                        ; On                  ; On                 ;
-; Report Connectivity Checks                                       ; On                  ; On                 ;
-; Ignore Maximum Fan-Out Assignments                               ; Off                 ; Off                ;
-; Synchronization Register Chain Length                            ; 2                   ; 2                  ;
-; Power Optimization During Synthesis                              ; Normal compilation  ; Normal compilation ;
-; HDL message level                                                ; Level2              ; Level2             ;
-; Suppress Register Optimization Related Messages                  ; Off                 ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report         ; 5000                ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report               ; 5000                ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report        ; 100                 ; 100                ;
-; Clock MUX Protection                                             ; On                  ; On                 ;
-; Auto Gated Clock Conversion                                      ; Off                 ; Off                ;
-; Block Design Naming                                              ; Auto                ; Auto               ;
-; SDC constraint protection                                        ; Off                 ; Off                ;
-; Synthesis Effort                                                 ; Auto                ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                  ; On                 ;
-; Pre-Mapping Resynthesis Optimization                             ; Off                 ; Off                ;
-; Analysis & Synthesis Message Level                               ; Medium              ; Medium             ;
-; Disable Register Merging Across Hierarchies                      ; Auto                ; Auto               ;
-; Resource Aware Inference For Block RAM                           ; On                  ; On                 ;
-+------------------------------------------------------------------+---------------------+--------------------+
 
 
 +------------------------------------------+
@@ -164,412 +68,97 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 8           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                        ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                          ; Library ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------+---------+
-; tick_FSM.v                       ; yes             ; User Verilog HDL File  ; C:/Github/Custom-RISC-Processor/tick_FSM.v            ;         ;
-; ALU.v                            ; yes             ; User Verilog HDL File  ; C:/Github/Custom-RISC-Processor/ALU.v                 ;         ;
-; Reg.v                            ; yes             ; User Verilog HDL File  ; C:/Github/Custom-RISC-Processor/Reg.v                 ;         ;
-; RISC_16.v                        ; yes             ; User Verilog HDL File  ; C:/Github/Custom-RISC-Processor/RISC_16.v             ;         ;
-; Control_unit.v                   ; yes             ; User Verilog HDL File  ; C:/Github/Custom-RISC-Processor/Control_unit.v        ;         ;
-; Register_file.v                  ; yes             ; User Verilog HDL File  ; C:/Github/Custom-RISC-Processor/Register_file.v       ;         ;
-; Mux_2.v                          ; yes             ; User Verilog HDL File  ; C:/Github/Custom-RISC-Processor/Mux_2.v               ;         ;
-; Sign_ext_8.v                     ; yes             ; User Verilog HDL File  ; C:/Github/Custom-RISC-Processor/Sign_ext_8.v          ;         ;
-; PC_counter.v                     ; yes             ; User Verilog HDL File  ; C:/Github/Custom-RISC-Processor/PC_counter.v          ;         ;
-; RISC_16_Manual_test.v            ; yes             ; User Verilog HDL File  ; C:/Github/Custom-RISC-Processor/RISC_16_Manual_test.v ;         ;
-; output_files/bcd_1.v             ; yes             ; User Verilog HDL File  ; C:/Github/Custom-RISC-Processor/output_files/bcd_1.v  ;         ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------+---------+
-
-
-+------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                ;
-+---------------------------------------------+--------------+
-; Resource                                    ; Usage        ;
-+---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 21           ;
-;                                             ;              ;
-; Total combinational functions               ; 21           ;
-; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 4            ;
-;     -- 3 input functions                    ; 13           ;
-;     -- <=2 input functions                  ; 4            ;
-;                                             ;              ;
-; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 21           ;
-;     -- arithmetic mode                      ; 0            ;
-;                                             ;              ;
-; Total registers                             ; 8            ;
-;     -- Dedicated logic registers            ; 8            ;
-;     -- I/O registers                        ; 0            ;
-;                                             ;              ;
-; I/O pins                                    ; 29           ;
-;                                             ;              ;
-; Embedded Multiplier 9-bit elements          ; 0            ;
-;                                             ;              ;
-; Maximum fan-out node                        ; KEY[0]~input ;
-; Maximum fan-out                             ; 8            ;
-; Total fan-out                               ; 115          ;
-; Average fan-out                             ; 1.32         ;
-+---------------------------------------------+--------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                             ; Entity Name         ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------+---------------------+--------------+
-; |RISC_16_Manual_test       ; 21 (12)             ; 8 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 29   ; 0            ; 0          ; |RISC_16_Manual_test                            ; RISC_16_Manual_test ; work         ;
-;    |RISC_16:Proc|          ; 2 (0)               ; 5 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_16_Manual_test|RISC_16:Proc               ; RISC_16             ; work         ;
-;       |tick_FSM:Tick|      ; 2 (2)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_16_Manual_test|RISC_16:Proc|tick_FSM:Tick ; tick_FSM            ; work         ;
-;    |bcd_1:bcd|             ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_16_Manual_test|bcd_1:bcd                  ; bcd_1               ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------+---------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                        ;
-+---------------------------------------------+---------------------------------------------+
-; Register name                               ; Reason for Removal                          ;
-+---------------------------------------------+---------------------------------------------+
-; tick_count[3]                               ; Stuck at GND due to stuck port data_in      ;
-; instruction[2..5,14,15]                     ; Stuck at GND due to stuck port data_in      ;
-; RISC_16:Proc|Reg:disp_register|Q[0..9]      ; Stuck at GND due to stuck port clock_enable ;
-; instruction[6,7]                            ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r0|Q[0]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r4|Q[0]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r8|Q[0]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r12|Q[0]  ; Lost fanout                                 ;
-; instruction[0,8..11]                        ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r1|Q[0]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r2|Q[0]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r3|Q[0]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r5|Q[0]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r6|Q[0]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r7|Q[0]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r9|Q[0]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r10|Q[0]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r11|Q[0]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r13|Q[0]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r14|Q[0]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r15|Q[0]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r0|Q[1]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r1|Q[1]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r2|Q[1]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r3|Q[1]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r4|Q[1]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r5|Q[1]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r6|Q[1]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r7|Q[1]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r8|Q[1]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r9|Q[1]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r10|Q[1]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r11|Q[1]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r12|Q[1]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r13|Q[1]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r14|Q[1]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r15|Q[1]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r0|Q[2]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r1|Q[2]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r2|Q[2]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r3|Q[2]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r4|Q[2]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r5|Q[2]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r6|Q[2]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r7|Q[2]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r8|Q[2]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r9|Q[2]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r10|Q[2]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r11|Q[2]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r12|Q[2]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r13|Q[2]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r14|Q[2]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r15|Q[2]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r0|Q[3]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r1|Q[3]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r2|Q[3]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r3|Q[3]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r4|Q[3]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r5|Q[3]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r6|Q[3]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r7|Q[3]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r8|Q[3]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r9|Q[3]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r10|Q[3]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r11|Q[3]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r12|Q[3]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r13|Q[3]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r14|Q[3]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r15|Q[3]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r0|Q[4]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r1|Q[4]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r2|Q[4]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r3|Q[4]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r4|Q[4]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r5|Q[4]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r6|Q[4]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r7|Q[4]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r8|Q[4]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r9|Q[4]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r10|Q[4]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r11|Q[4]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r12|Q[4]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r13|Q[4]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r14|Q[4]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r15|Q[4]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r0|Q[5]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r1|Q[5]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r2|Q[5]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r3|Q[5]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r4|Q[5]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r5|Q[5]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r6|Q[5]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r7|Q[5]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r8|Q[5]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r9|Q[5]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r10|Q[5]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r11|Q[5]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r12|Q[5]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r13|Q[5]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r14|Q[5]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r15|Q[5]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r0|Q[6]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r1|Q[6]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r2|Q[6]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r3|Q[6]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r4|Q[6]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r5|Q[6]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r6|Q[6]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r7|Q[6]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r8|Q[6]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r9|Q[6]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r10|Q[6]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r11|Q[6]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r12|Q[6]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r13|Q[6]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r14|Q[6]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r15|Q[6]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r0|Q[7]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r1|Q[7]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r2|Q[7]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r3|Q[7]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r4|Q[7]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r5|Q[7]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r6|Q[7]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r7|Q[7]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r8|Q[7]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r9|Q[7]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r10|Q[7]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r11|Q[7]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r12|Q[7]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r13|Q[7]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r14|Q[7]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r15|Q[7]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r0|Q[8]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r1|Q[8]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r2|Q[8]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r3|Q[8]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r4|Q[8]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r5|Q[8]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r6|Q[8]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r7|Q[8]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r8|Q[8]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r9|Q[8]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r10|Q[8]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r11|Q[8]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r12|Q[8]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r13|Q[8]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r14|Q[8]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r15|Q[8]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r0|Q[9]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r1|Q[9]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r2|Q[9]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r3|Q[9]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r4|Q[9]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r5|Q[9]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r6|Q[9]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r7|Q[9]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r8|Q[9]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r9|Q[9]   ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r10|Q[9]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r11|Q[9]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r12|Q[9]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r13|Q[9]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r14|Q[9]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r15|Q[9]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r0|Q[10]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r1|Q[10]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r2|Q[10]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r3|Q[10]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r4|Q[10]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r5|Q[10]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r6|Q[10]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r7|Q[10]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r8|Q[10]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r9|Q[10]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r10|Q[10] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r11|Q[10] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r12|Q[10] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r13|Q[10] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r14|Q[10] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r15|Q[10] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r0|Q[11]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r1|Q[11]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r2|Q[11]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r3|Q[11]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r4|Q[11]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r5|Q[11]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r6|Q[11]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r7|Q[11]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r8|Q[11]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r9|Q[11]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r10|Q[11] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r11|Q[11] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r12|Q[11] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r13|Q[11] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r14|Q[11] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r15|Q[11] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r0|Q[12]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r1|Q[12]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r2|Q[12]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r3|Q[12]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r4|Q[12]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r5|Q[12]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r6|Q[12]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r7|Q[12]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r8|Q[12]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r9|Q[12]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r10|Q[12] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r11|Q[12] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r12|Q[12] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r13|Q[12] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r14|Q[12] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r15|Q[12] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r0|Q[13]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r1|Q[13]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r2|Q[13]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r3|Q[13]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r4|Q[13]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r5|Q[13]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r6|Q[13]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r7|Q[13]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r8|Q[13]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r9|Q[13]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r10|Q[13] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r11|Q[13] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r12|Q[13] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r13|Q[13] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r14|Q[13] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r15|Q[13] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r0|Q[14]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r1|Q[14]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r2|Q[14]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r3|Q[14]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r4|Q[14]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r5|Q[14]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r6|Q[14]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r7|Q[14]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r8|Q[14]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r9|Q[14]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r10|Q[14] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r11|Q[14] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r12|Q[14] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r13|Q[14] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r14|Q[14] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r15|Q[14] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r0|Q[15]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r1|Q[15]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r2|Q[15]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r3|Q[15]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r4|Q[15]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r5|Q[15]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r6|Q[15]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r7|Q[15]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r8|Q[15]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r9|Q[15]  ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r10|Q[15] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r11|Q[15] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r12|Q[15] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r13|Q[15] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r14|Q[15] ; Lost fanout                                 ;
-; RISC_16:Proc|Register_file:R0|Reg:r15|Q[15] ; Lost fanout                                 ;
-; instruction[1,12,13]                        ; Lost fanout                                 ;
-; Total Number of Removed Registers = 283     ;                                             ;
-+---------------------------------------------+---------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                     ;
-+-----------------+---------------------------+-----------------------------------------------------------------------------------+
-; Register name   ; Reason for Removal        ; Registers Removed due to This Register                                            ;
-+-----------------+---------------------------+-----------------------------------------------------------------------------------+
-; instruction[4]  ; Stuck at GND              ; RISC_16:Proc|Reg:disp_register|Q[0], RISC_16:Proc|Reg:disp_register|Q[1],         ;
-;                 ; due to stuck port data_in ; RISC_16:Proc|Reg:disp_register|Q[2], RISC_16:Proc|Reg:disp_register|Q[3],         ;
-;                 ;                           ; RISC_16:Proc|Reg:disp_register|Q[4], RISC_16:Proc|Reg:disp_register|Q[5],         ;
-;                 ;                           ; RISC_16:Proc|Reg:disp_register|Q[6], RISC_16:Proc|Reg:disp_register|Q[7],         ;
-;                 ;                           ; RISC_16:Proc|Reg:disp_register|Q[8], RISC_16:Proc|Reg:disp_register|Q[9],         ;
-;                 ;                           ; instruction[6], instruction[7], instruction[0], instruction[10], instruction[11], ;
-;                 ;                           ; instruction[9], RISC_16:Proc|Register_file:R0|Reg:r0|Q[10],                       ;
-;                 ;                           ; RISC_16:Proc|Register_file:R0|Reg:r1|Q[10],                                       ;
-;                 ;                           ; RISC_16:Proc|Register_file:R0|Reg:r2|Q[10],                                       ;
-;                 ;                           ; RISC_16:Proc|Register_file:R0|Reg:r3|Q[10],                                       ;
-;                 ;                           ; RISC_16:Proc|Register_file:R0|Reg:r4|Q[10], instruction[1]                        ;
-; instruction[14] ; Stuck at GND              ; instruction[12], instruction[13]                                                  ;
-;                 ; due to stuck port data_in ;                                                                                   ;
-; instruction[3]  ; Stuck at GND              ; instruction[8]                                                                    ;
-;                 ; due to stuck port data_in ;                                                                                   ;
-+-----------------+---------------------------+-----------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 8     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; RISC_16:Proc|tick_FSM:Tick|tick[4]     ; 7       ;
-; Total number of inverted registers = 1 ;         ;
-+----------------------------------------+---------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
-; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |RISC_16_Manual_test|RISC_16:Proc|Mux_2:ALU_mux|out[5]          ;
-; 6:1                ; 9 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |RISC_16_Manual_test|RISC_16:Proc|Mux_2:ALU_mux|out[7]          ;
-; 7:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |RISC_16_Manual_test|RISC_16:Proc|Mux_2:ALU_mux|out[0]          ;
-; 17:1               ; 16 bits   ; 176 LEs       ; 176 LEs              ; 0 LEs                  ; No         ; |RISC_16_Manual_test|RISC_16:Proc|Register_file:R0|out_data1[1] ;
-; 20:1               ; 4 bits    ; 52 LEs        ; 36 LEs               ; 16 LEs                 ; No         ; |RISC_16_Manual_test|RISC_16:Proc|ALU:Alu|Mux8                  ;
-; 20:1               ; 4 bits    ; 52 LEs        ; 40 LEs               ; 12 LEs                 ; No         ; |RISC_16_Manual_test|RISC_16:Proc|ALU:Alu|Mux4                  ;
-; 21:1               ; 2 bits    ; 28 LEs        ; 20 LEs               ; 8 LEs                  ; No         ; |RISC_16_Manual_test|RISC_16:Proc|ALU:Alu|Mux12                 ;
-; 21:1               ; 2 bits    ; 28 LEs        ; 20 LEs               ; 8 LEs                  ; No         ; |RISC_16_Manual_test|RISC_16:Proc|ALU:Alu|Mux2                  ;
-; 22:1               ; 2 bits    ; 28 LEs        ; 20 LEs               ; 8 LEs                  ; No         ; |RISC_16_Manual_test|RISC_16:Proc|ALU:Alu|Mux0                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Settings                                                                            ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; RISC_16_TB         ; RISC_16            ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
 
 
 +-------------------------------------------------------------+
@@ -590,56 +179,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "RISC_16:Proc"                                                                                  ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port            ; Type   ; Severity ; Details                                                                             ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; enable          ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; display[15..10] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RISC_16:Proc"                                                                                      ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                ; Type   ; Severity ; Details                                                                             ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+; t_alu_in1           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; t_alu_in2           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; t_alu_out           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; clk                 ; Input  ; Info     ; Stuck at GND                                                                        ;
+; enable              ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; instruction[15..13] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; instruction[11..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; instruction[12]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; instruction[0]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; tick_out            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; display             ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 29                          ;
-; cycloneiii_ff         ; 8                           ;
-;     plain             ; 8                           ;
-; cycloneiii_lcell_comb ; 23                          ;
-;     normal            ; 23                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 4                           ;
-;         3 data inputs ; 13                          ;
-;         4 data inputs ; 4                           ;
-;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.69                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:01     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Sep 07 20:52:01 2025
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RISC_16 -c RISC_16
+    Info: Processing started: Wed Sep 10 22:41:22 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RISC_16 -c RISC_16 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file risc_16_tb.v
+    Info (12023): Found entity 1: RISC_16_TB File: C:/Github/Custom-RISC-Processor/RISC_16_TB.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file tick_fsm.v
     Info (12023): Found entity 1: tick_FSM File: C:/Github/Custom-RISC-Processor/tick_FSM.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
@@ -662,11 +232,14 @@ Info (12021): Found 1 design units, including 1 entities, in source file risc_16
     Info (12023): Found entity 1: RISC_16_Manual_test File: C:/Github/Custom-RISC-Processor/RISC_16_Manual_test.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file output_files/bcd_1.v
     Info (12023): Found entity 1: bcd_1 File: C:/Github/Custom-RISC-Processor/output_files/bcd_1.v Line: 1
-Info (12127): Elaborating entity "RISC_16_Manual_test" for the top level hierarchy
-Info (10264): Verilog HDL Case Statement information at RISC_16_Manual_test.v(21): all case item expressions in this case statement are onehot File: C:/Github/Custom-RISC-Processor/RISC_16_Manual_test.v Line: 21
-Info (12128): Elaborating entity "bcd_1" for hierarchy "bcd_1:bcd" File: C:/Github/Custom-RISC-Processor/RISC_16_Manual_test.v Line: 37
-Info (12128): Elaborating entity "RISC_16" for hierarchy "RISC_16:Proc" File: C:/Github/Custom-RISC-Processor/RISC_16_Manual_test.v Line: 45
-Info (12128): Elaborating entity "Control_unit" for hierarchy "RISC_16:Proc|Control_unit:C0" File: C:/Github/Custom-RISC-Processor/RISC_16.v Line: 43
+Info (12127): Elaborating entity "RISC_16_TB" for the top level hierarchy
+Warning (10858): Verilog HDL warning at RISC_16_TB.v(11): object expected_in1 used but never assigned File: C:/Github/Custom-RISC-Processor/RISC_16_TB.v Line: 11
+Warning (10858): Verilog HDL warning at RISC_16_TB.v(12): object expected_in2 used but never assigned File: C:/Github/Custom-RISC-Processor/RISC_16_TB.v Line: 12
+Warning (10858): Verilog HDL warning at RISC_16_TB.v(13): object expected_out used but never assigned File: C:/Github/Custom-RISC-Processor/RISC_16_TB.v Line: 13
+Warning (10175): Verilog HDL warning at RISC_16_TB.v(60): ignoring unsupported system task File: C:/Github/Custom-RISC-Processor/RISC_16_TB.v Line: 60
+Warning (10240): Verilog HDL Always Construct warning at RISC_16_TB.v(56): inferring latch(es) for variable "errors", which holds its previous value in one or more paths through the always construct File: C:/Github/Custom-RISC-Processor/RISC_16_TB.v Line: 56
+Info (12128): Elaborating entity "RISC_16" for hierarchy "RISC_16:Proc" File: C:/Github/Custom-RISC-Processor/RISC_16_TB.v Line: 36
+Info (12128): Elaborating entity "Control_unit" for hierarchy "RISC_16:Proc|Control_unit:C0" File: C:/Github/Custom-RISC-Processor/RISC_16.v Line: 53
 Info (10264): Verilog HDL Case Statement information at Control_unit.v(73): all case item expressions in this case statement are onehot File: C:/Github/Custom-RISC-Processor/Control_unit.v Line: 73
 Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(70): inferring latch(es) for variable "Reg_w_enable", which holds its previous value in one or more paths through the always construct File: C:/Github/Custom-RISC-Processor/Control_unit.v Line: 70
 Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(70): inferring latch(es) for variable "disp_enable", which holds its previous value in one or more paths through the always construct File: C:/Github/Custom-RISC-Processor/Control_unit.v Line: 70
@@ -689,7 +262,7 @@ Info (10041): Inferred latch for "Reg_r_enable" at Control_unit.v(70) File: C:/G
 Info (10041): Inferred latch for "Sign_mux" at Control_unit.v(70) File: C:/Github/Custom-RISC-Processor/Control_unit.v Line: 70
 Info (10041): Inferred latch for "disp_enable" at Control_unit.v(70) File: C:/Github/Custom-RISC-Processor/Control_unit.v Line: 70
 Info (10041): Inferred latch for "Reg_w_enable" at Control_unit.v(70) File: C:/Github/Custom-RISC-Processor/Control_unit.v Line: 70
-Info (12128): Elaborating entity "Register_file" for hierarchy "RISC_16:Proc|Register_file:R0" File: C:/Github/Custom-RISC-Processor/RISC_16.v Line: 54
+Info (12128): Elaborating entity "Register_file" for hierarchy "RISC_16:Proc|Register_file:R0" File: C:/Github/Custom-RISC-Processor/RISC_16.v Line: 64
 Warning (10240): Verilog HDL Always Construct warning at Register_file.v(53): inferring latch(es) for variable "enable", which holds its previous value in one or more paths through the always construct File: C:/Github/Custom-RISC-Processor/Register_file.v Line: 53
 Info (10041): Inferred latch for "enable[0]" at Register_file.v(53) File: C:/Github/Custom-RISC-Processor/Register_file.v Line: 53
 Info (10041): Inferred latch for "enable[1]" at Register_file.v(53) File: C:/Github/Custom-RISC-Processor/Register_file.v Line: 53
@@ -708,54 +281,23 @@ Info (10041): Inferred latch for "enable[13]" at Register_file.v(53) File: C:/Gi
 Info (10041): Inferred latch for "enable[14]" at Register_file.v(53) File: C:/Github/Custom-RISC-Processor/Register_file.v Line: 53
 Info (10041): Inferred latch for "enable[15]" at Register_file.v(53) File: C:/Github/Custom-RISC-Processor/Register_file.v Line: 53
 Info (12128): Elaborating entity "Reg" for hierarchy "RISC_16:Proc|Register_file:R0|Reg:r0" File: C:/Github/Custom-RISC-Processor/Register_file.v Line: 35
-Info (12128): Elaborating entity "PC_counter" for hierarchy "RISC_16:Proc|PC_counter:PC" File: C:/Github/Custom-RISC-Processor/RISC_16.v Line: 63
-Info (12128): Elaborating entity "ALU" for hierarchy "RISC_16:Proc|ALU:Alu" File: C:/Github/Custom-RISC-Processor/RISC_16.v Line: 70
-Info (12128): Elaborating entity "tick_FSM" for hierarchy "RISC_16:Proc|tick_FSM:Tick" File: C:/Github/Custom-RISC-Processor/RISC_16.v Line: 75
+Info (12128): Elaborating entity "PC_counter" for hierarchy "RISC_16:Proc|PC_counter:PC" File: C:/Github/Custom-RISC-Processor/RISC_16.v Line: 73
+Info (12128): Elaborating entity "ALU" for hierarchy "RISC_16:Proc|ALU:Alu" File: C:/Github/Custom-RISC-Processor/RISC_16.v Line: 80
+Info (12128): Elaborating entity "tick_FSM" for hierarchy "RISC_16:Proc|tick_FSM:Tick" File: C:/Github/Custom-RISC-Processor/RISC_16.v Line: 85
 Info (10264): Verilog HDL Case Statement information at tick_FSM.v(26): all case item expressions in this case statement are onehot File: C:/Github/Custom-RISC-Processor/tick_FSM.v Line: 26
-Info (12128): Elaborating entity "Mux_2" for hierarchy "RISC_16:Proc|Mux_2:ALU_mux" File: C:/Github/Custom-RISC-Processor/RISC_16.v Line: 82
-Info (12128): Elaborating entity "Sign_ext_8" for hierarchy "RISC_16:Proc|Sign_ext_8:sign_x" File: C:/Github/Custom-RISC-Processor/RISC_16.v Line: 101
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Github/Custom-RISC-Processor/RISC_16_Manual_test.v Line: 4
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Github/Custom-RISC-Processor/RISC_16_Manual_test.v Line: 4
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Github/Custom-RISC-Processor/RISC_16_Manual_test.v Line: 4
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Github/Custom-RISC-Processor/RISC_16_Manual_test.v Line: 4
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Github/Custom-RISC-Processor/RISC_16_Manual_test.v Line: 4
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Github/Custom-RISC-Processor/RISC_16_Manual_test.v Line: 4
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Github/Custom-RISC-Processor/RISC_16_Manual_test.v Line: 4
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Github/Custom-RISC-Processor/RISC_16_Manual_test.v Line: 4
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Github/Custom-RISC-Processor/RISC_16_Manual_test.v Line: 4
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Github/Custom-RISC-Processor/RISC_16_Manual_test.v Line: 4
-Info (286030): Timing-Driven Synthesis is running
-Info (17049): 266 registers lost all their fanouts during netlist optimizations.
+Info (12128): Elaborating entity "Mux_2" for hierarchy "RISC_16:Proc|Mux_2:ALU_mux" File: C:/Github/Custom-RISC-Processor/RISC_16.v Line: 92
+Info (12128): Elaborating entity "Sign_ext_8" for hierarchy "RISC_16:Proc|Sign_ext_8:sign_x" File: C:/Github/Custom-RISC-Processor/RISC_16.v Line: 111
 Info (144001): Generated suppressed messages file C:/Github/Custom-RISC-Processor/output_files/RISC_16.map.smsg
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 11 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Github/Custom-RISC-Processor/RISC_16_Manual_test.v Line: 2
-    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Github/Custom-RISC-Processor/RISC_16_Manual_test.v Line: 3
-    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Github/Custom-RISC-Processor/RISC_16_Manual_test.v Line: 3
-    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Github/Custom-RISC-Processor/RISC_16_Manual_test.v Line: 3
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Github/Custom-RISC-Processor/RISC_16_Manual_test.v Line: 3
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Github/Custom-RISC-Processor/RISC_16_Manual_test.v Line: 3
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Github/Custom-RISC-Processor/RISC_16_Manual_test.v Line: 3
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Github/Custom-RISC-Processor/RISC_16_Manual_test.v Line: 3
-    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Github/Custom-RISC-Processor/RISC_16_Manual_test.v Line: 3
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Github/Custom-RISC-Processor/RISC_16_Manual_test.v Line: 3
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Github/Custom-RISC-Processor/RISC_16_Manual_test.v Line: 3
-Info (21057): Implemented 50 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 12 input pins
-    Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 21 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 33 warnings
-    Info: Peak virtual memory: 4811 megabytes
-    Info: Processing ended: Sun Sep 07 20:52:22 2025
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:45
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 16 warnings
+    Info: Peak virtual memory: 4721 megabytes
+    Info: Processing ended: Wed Sep 10 22:41:41 2025
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:43
 
 
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
++--------------------------------------------+
+; Analysis & Elaboration Suppressed Messages ;
++--------------------------------------------+
 The suppressed messages can be found in C:/Github/Custom-RISC-Processor/output_files/RISC_16.map.smsg.
 
 

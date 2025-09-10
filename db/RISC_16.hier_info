@@ -1,50 +1,55 @@
-|RISC_16_Manual_test
-KEY[0] => clk.IN1
-KEY[1] => ~NO_FANOUT~
-SW[0] => instruction.DATAB
-SW[1] => instruction.DATAB
-SW[2] => instruction.DATAB
-SW[3] => instruction.DATAB
-SW[4] => instruction.DATAB
-SW[5] => instruction.DATAB
-SW[6] => instruction.DATAB
-SW[7] => instruction.DATAB
-SW[8] => instruction.DATAB
-SW[9] => instruction.DATAB
-LEDR[0] << RISC_16:Proc.display
-LEDR[1] << RISC_16:Proc.display
-LEDR[2] << RISC_16:Proc.display
-LEDR[3] << RISC_16:Proc.display
-LEDR[4] << RISC_16:Proc.display
-LEDR[5] << RISC_16:Proc.display
-LEDR[6] << RISC_16:Proc.display
-LEDR[7] << RISC_16:Proc.display
-LEDR[8] << RISC_16:Proc.display
-LEDR[9] << RISC_16:Proc.display
-HEX5[0] << bcd_1:bcd.out
-HEX5[1] << bcd_1:bcd.out
-HEX5[2] << bcd_1:bcd.out
-HEX5[3] << bcd_1:bcd.out
-HEX5[4] << bcd_1:bcd.out
-HEX5[5] << bcd_1:bcd.out
-HEX5[6] << bcd_1:bcd.out
+|RISC_16_TB
 
 
-|RISC_16_Manual_test|bcd_1:bcd
-in[0] => Decoder0.IN3
-in[1] => Decoder0.IN2
-in[2] => Decoder0.IN1
-in[3] => Decoder0.IN0
-out[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-out[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-out[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-out[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-out[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
-out[5] <= temp.DB_MAX_OUTPUT_PORT_TYPE
-out[6] <= temp.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|RISC_16_Manual_test|RISC_16:Proc
+|RISC_16_TB|RISC_16:Proc
+t_alu_in1[0] <= alu_in1[0].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_in1[1] <= alu_in1[1].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_in1[2] <= alu_in1[2].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_in1[3] <= alu_in1[3].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_in1[4] <= alu_in1[4].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_in1[5] <= alu_in1[5].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_in1[6] <= alu_in1[6].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_in1[7] <= alu_in1[7].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_in1[8] <= alu_in1[8].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_in1[9] <= alu_in1[9].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_in1[10] <= alu_in1[10].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_in1[11] <= alu_in1[11].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_in1[12] <= alu_in1[12].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_in1[13] <= alu_in1[13].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_in1[14] <= alu_in1[14].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_in1[15] <= alu_in1[15].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_in2[0] <= alu_in2[0].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_in2[1] <= alu_in2[1].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_in2[2] <= alu_in2[2].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_in2[3] <= alu_in2[3].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_in2[4] <= alu_in2[4].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_in2[5] <= alu_in2[5].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_in2[6] <= alu_in2[6].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_in2[7] <= alu_in2[7].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_in2[8] <= alu_in2[8].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_in2[9] <= alu_in2[9].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_in2[10] <= alu_in2[10].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_in2[11] <= alu_in2[11].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_in2[12] <= alu_in2[12].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_in2[13] <= alu_in2[13].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_in2[14] <= alu_in2[14].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_in2[15] <= alu_in2[15].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_out[0] <= alu_out[0].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_out[1] <= alu_out[1].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_out[2] <= alu_out[2].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_out[3] <= alu_out[3].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_out[4] <= alu_out[4].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_out[5] <= alu_out[5].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_out[6] <= alu_out[6].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_out[7] <= alu_out[7].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_out[8] <= alu_out[8].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_out[9] <= alu_out[9].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_out[10] <= alu_out[10].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_out[11] <= alu_out[11].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_out[12] <= alu_out[12].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_out[13] <= alu_out[13].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_out[14] <= alu_out[14].DB_MAX_OUTPUT_PORT_TYPE
+t_alu_out[15] <= alu_out[15].DB_MAX_OUTPUT_PORT_TYPE
 clk => clk.IN5
 enable => enable.IN1
 instruction[0] => instruction[0].IN1
@@ -86,7 +91,7 @@ display[14] <= Reg:disp_register.Q
 display[15] <= Reg:disp_register.Q
 
 
-|RISC_16_Manual_test|RISC_16:Proc|Control_unit:C0
+|RISC_16_TB|RISC_16:Proc|Control_unit:C0
 clk => ~NO_FANOUT~
 enable => Decoder2.IN0
 instruction[0] => Sign_ext_in[0].DATAIN
@@ -206,7 +211,7 @@ ALU_op[2] <= ALU_op[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
 ALU_op[3] <= ALU_op[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_16_Manual_test|RISC_16:Proc|Register_file:R0
+|RISC_16_TB|RISC_16:Proc|Register_file:R0
 clk => clk.IN16
 read_enable => Decoder0.IN0
 write_enable => Decoder2.IN0
@@ -392,7 +397,7 @@ out_data2[14] <= out_data2.DB_MAX_OUTPUT_PORT_TYPE
 out_data2[15] <= out_data2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_16_Manual_test|RISC_16:Proc|Register_file:R0|Reg:r0
+|RISC_16_TB|RISC_16:Proc|Register_file:R0|Reg:r0
 enable => Decoder0.IN0
 clk => Q[0]~reg0.CLK
 clk => Q[1]~reg0.CLK
@@ -444,7 +449,7 @@ Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_16_Manual_test|RISC_16:Proc|Register_file:R0|Reg:r1
+|RISC_16_TB|RISC_16:Proc|Register_file:R0|Reg:r1
 enable => Decoder0.IN0
 clk => Q[0]~reg0.CLK
 clk => Q[1]~reg0.CLK
@@ -496,7 +501,7 @@ Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_16_Manual_test|RISC_16:Proc|Register_file:R0|Reg:r2
+|RISC_16_TB|RISC_16:Proc|Register_file:R0|Reg:r2
 enable => Decoder0.IN0
 clk => Q[0]~reg0.CLK
 clk => Q[1]~reg0.CLK
@@ -548,7 +553,7 @@ Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_16_Manual_test|RISC_16:Proc|Register_file:R0|Reg:r3
+|RISC_16_TB|RISC_16:Proc|Register_file:R0|Reg:r3
 enable => Decoder0.IN0
 clk => Q[0]~reg0.CLK
 clk => Q[1]~reg0.CLK
@@ -600,7 +605,7 @@ Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_16_Manual_test|RISC_16:Proc|Register_file:R0|Reg:r4
+|RISC_16_TB|RISC_16:Proc|Register_file:R0|Reg:r4
 enable => Decoder0.IN0
 clk => Q[0]~reg0.CLK
 clk => Q[1]~reg0.CLK
@@ -652,7 +657,7 @@ Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_16_Manual_test|RISC_16:Proc|Register_file:R0|Reg:r5
+|RISC_16_TB|RISC_16:Proc|Register_file:R0|Reg:r5
 enable => Decoder0.IN0
 clk => Q[0]~reg0.CLK
 clk => Q[1]~reg0.CLK
@@ -704,7 +709,7 @@ Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_16_Manual_test|RISC_16:Proc|Register_file:R0|Reg:r6
+|RISC_16_TB|RISC_16:Proc|Register_file:R0|Reg:r6
 enable => Decoder0.IN0
 clk => Q[0]~reg0.CLK
 clk => Q[1]~reg0.CLK
@@ -756,7 +761,7 @@ Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_16_Manual_test|RISC_16:Proc|Register_file:R0|Reg:r7
+|RISC_16_TB|RISC_16:Proc|Register_file:R0|Reg:r7
 enable => Decoder0.IN0
 clk => Q[0]~reg0.CLK
 clk => Q[1]~reg0.CLK
@@ -808,7 +813,7 @@ Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_16_Manual_test|RISC_16:Proc|Register_file:R0|Reg:r8
+|RISC_16_TB|RISC_16:Proc|Register_file:R0|Reg:r8
 enable => Decoder0.IN0
 clk => Q[0]~reg0.CLK
 clk => Q[1]~reg0.CLK
@@ -860,7 +865,7 @@ Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_16_Manual_test|RISC_16:Proc|Register_file:R0|Reg:r9
+|RISC_16_TB|RISC_16:Proc|Register_file:R0|Reg:r9
 enable => Decoder0.IN0
 clk => Q[0]~reg0.CLK
 clk => Q[1]~reg0.CLK
@@ -912,7 +917,7 @@ Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_16_Manual_test|RISC_16:Proc|Register_file:R0|Reg:r10
+|RISC_16_TB|RISC_16:Proc|Register_file:R0|Reg:r10
 enable => Decoder0.IN0
 clk => Q[0]~reg0.CLK
 clk => Q[1]~reg0.CLK
@@ -964,7 +969,7 @@ Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_16_Manual_test|RISC_16:Proc|Register_file:R0|Reg:r11
+|RISC_16_TB|RISC_16:Proc|Register_file:R0|Reg:r11
 enable => Decoder0.IN0
 clk => Q[0]~reg0.CLK
 clk => Q[1]~reg0.CLK
@@ -1016,7 +1021,7 @@ Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_16_Manual_test|RISC_16:Proc|Register_file:R0|Reg:r12
+|RISC_16_TB|RISC_16:Proc|Register_file:R0|Reg:r12
 enable => Decoder0.IN0
 clk => Q[0]~reg0.CLK
 clk => Q[1]~reg0.CLK
@@ -1068,7 +1073,7 @@ Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_16_Manual_test|RISC_16:Proc|Register_file:R0|Reg:r13
+|RISC_16_TB|RISC_16:Proc|Register_file:R0|Reg:r13
 enable => Decoder0.IN0
 clk => Q[0]~reg0.CLK
 clk => Q[1]~reg0.CLK
@@ -1120,7 +1125,7 @@ Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_16_Manual_test|RISC_16:Proc|Register_file:R0|Reg:r14
+|RISC_16_TB|RISC_16:Proc|Register_file:R0|Reg:r14
 enable => Decoder0.IN0
 clk => Q[0]~reg0.CLK
 clk => Q[1]~reg0.CLK
@@ -1172,7 +1177,7 @@ Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_16_Manual_test|RISC_16:Proc|Register_file:R0|Reg:r15
+|RISC_16_TB|RISC_16:Proc|Register_file:R0|Reg:r15
 enable => Decoder0.IN0
 clk => Q[0]~reg0.CLK
 clk => Q[1]~reg0.CLK
@@ -1224,7 +1229,7 @@ Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_16_Manual_test|RISC_16:Proc|PC_counter:PC
+|RISC_16_TB|RISC_16:Proc|PC_counter:PC
 replace => Q.OUTPUTSELECT
 replace => Q.OUTPUTSELECT
 replace => Q.OUTPUTSELECT
@@ -1339,7 +1344,7 @@ Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_16_Manual_test|RISC_16:Proc|ALU:Alu
+|RISC_16_TB|RISC_16:Proc|ALU:Alu
 a[0] => Add0.IN16
 a[0] => Mult0.IN15
 a[0] => Div0.IN15
@@ -1838,7 +1843,7 @@ out[14] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 out[15] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_16_Manual_test|RISC_16:Proc|tick_FSM:Tick
+|RISC_16_TB|RISC_16:Proc|tick_FSM:Tick
 clk => tick[0]~reg0.CLK
 clk => tick[1]~reg0.CLK
 clk => tick[2]~reg0.CLK
@@ -1851,7 +1856,7 @@ tick[3] <= tick[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 tick[4] <= tick[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_16_Manual_test|RISC_16:Proc|Mux_2:ALU_mux
+|RISC_16_TB|RISC_16:Proc|Mux_2:ALU_mux
 select => out.OUTPUTSELECT
 select => out.OUTPUTSELECT
 select => out.OUTPUTSELECT
@@ -1918,7 +1923,7 @@ out[14] <= out.DB_MAX_OUTPUT_PORT_TYPE
 out[15] <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_16_Manual_test|RISC_16:Proc|Mux_2:Write_data_mux
+|RISC_16_TB|RISC_16:Proc|Mux_2:Write_data_mux
 select => out.OUTPUTSELECT
 select => out.OUTPUTSELECT
 select => out.OUTPUTSELECT
@@ -1985,7 +1990,7 @@ out[14] <= out.DB_MAX_OUTPUT_PORT_TYPE
 out[15] <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_16_Manual_test|RISC_16:Proc|Mux_2:Sign_ext_mux
+|RISC_16_TB|RISC_16:Proc|Mux_2:Sign_ext_mux
 select => out.OUTPUTSELECT
 select => out.OUTPUTSELECT
 select => out.OUTPUTSELECT
@@ -2052,7 +2057,7 @@ out[14] <= out.DB_MAX_OUTPUT_PORT_TYPE
 out[15] <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_16_Manual_test|RISC_16:Proc|Sign_ext_8:sign_x
+|RISC_16_TB|RISC_16:Proc|Sign_ext_8:sign_x
 a[0] => out[0].DATAIN
 a[1] => out[1].DATAIN
 a[2] => out[2].DATAIN
@@ -2087,7 +2092,7 @@ out[14] <= a[7].DB_MAX_OUTPUT_PORT_TYPE
 out[15] <= a[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RISC_16_Manual_test|RISC_16:Proc|Reg:disp_register
+|RISC_16_TB|RISC_16:Proc|Reg:disp_register
 enable => Decoder0.IN0
 clk => Q[0]~reg0.CLK
 clk => Q[1]~reg0.CLK

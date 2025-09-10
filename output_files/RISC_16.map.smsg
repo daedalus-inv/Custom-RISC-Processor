@@ -1,2 +1,2 @@
-Info (10281): Verilog HDL Declaration information at RISC_16.v(20): object "tick" differs only in case from object "Tick" in the same scope File: C:/Github/Custom-RISC-Processor/RISC_16.v Line: 20
-Info (10281): Verilog HDL Declaration information at RISC_16.v(15): object "alu_mux" differs only in case from object "ALU_mux" in the same scope File: C:/Github/Custom-RISC-Processor/RISC_16.v Line: 15
+Info (10281): Verilog HDL Declaration information at RISC_16.v(30): object "tick" differs only in case from object "Tick" in the same scope File: C:/Github/Custom-RISC-Processor/RISC_16.v Line: 30
+Info (10281): Verilog HDL Declaration information at RISC_16.v(25): object "alu_mux" differs only in case from object "ALU_mux" in the same scope File: C:/Github/Custom-RISC-Processor/RISC_16.v Line: 25

@@ -1,1 +1,2 @@
 v1
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,RISC_16:Proc|ALU:Alu|lpm_mult:Mult0|mult_tns:auto_generated|mac_out2,

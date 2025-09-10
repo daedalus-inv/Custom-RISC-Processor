@@ -21,7 +21,7 @@ always @(posedge clk) begin
 	case (tick)
 		5'b10000: begin
 			tick_count <= 4'd1;
-			instruction <= {SW[9:6], SW[5:2], 4'b0, SW[1:0]};
+			instruction <= {SW[9:6], SW[5:2], 6'b0, SW[1:0]};
 		end
 		5'b01000:	tick_count <= 4'd2;
 		5'b00100:	tick_count <= 4'd3;
